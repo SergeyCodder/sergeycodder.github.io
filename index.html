@@ -1,1 +1,59 @@
-<h1>Hello</h1>
+<!doctype HTML>
+<html>
+
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script>
+  </script>
+
+<body style='margin : 0px; overflow: scroll;'>
+  <a-scene id="a-scene" embedded stats arjs>
+    <a-marker type='pattern' url='pattern-3dMenu.patt'>
+      <a-image src="/assets/menu.jpg" rotation="-90 180 180" width="1.0" height="1.75"></a-image>
+
+      <a-entity>
+        <a-torus 
+          color="#43A367"
+          position="-0.75 0.3 1.12"
+          radius="0.25"
+          radius-tubular="0.01"></a-torus>
+      </a-entity>
+
+      <a-entity  
+        id="1"
+        rotation="45 -90 90"
+        scale="2 2 2" 
+        position="0.6 0.6 0.8"
+        gltf-model="/assets/banana/scene.glb">
+      </a-entity>
+
+      <a-entity  
+        id="2"
+        rotation="45 -90 90"
+        scale="1 1 1" 
+        position="0.8 0.6 -0.15"
+        gltf-model="/assets/pizza/scene.glb">
+      </a-entity>
+      
+      <a-entity  
+      id="3"
+      rotation="45 -90 90"
+      scale="0.25 0.25 0.25" 
+      position="-0.3 0.6 1.4"
+      gltf-model="/assets/marshmallow/scene.glb">
+      </a-entity>
+
+      <a-entity  
+      id="4"
+      rotation="45 -90 90"
+      scale="0.03 0.03 0.03" 
+      position="-0.45 0.6 -0.2"
+      gltf-model="/assets/grape/scene.glb">
+    </a-entity>
+      
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+
+</html>
